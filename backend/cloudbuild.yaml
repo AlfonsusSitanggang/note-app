@@ -2,12 +2,12 @@ steps:
   # Membuat image dengan perintah "cloud build -t gcr.io/$PROJECT_ID/tcc-be-rest ."
   # Project ID akan secara otomatis terisi ketika melakukan deploy di project yg dipilih
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/tcc-be-rest", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/tcc-be-rest-alfon", "."]
 
   # Meng-upload/push image yg telah dibuat ke Artifact Registry
   # Pada bagian ini, dijalankan perintah "docker push 'gcr.io/$PROJECT_ID/tcc-be-rest'"
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/tcc-be-rest"]
+    args: ["push", "gcr.io/$PROJECT_ID/tcc-be-rest-alfon"]
 
   # Melakukan deploy ke cloud run menggunakan image yg telah di-upload/push pada langkah sebelumnya
   # Pada bagian ini, dijalankan perintah sebagai berikut.
@@ -30,9 +30,9 @@ steps:
       [
         "run",
         "deploy",
-        "be-rest",
+        "be-rest-alfon",
         "--image",
-        "gcr.io/$PROJECT_ID/tcc-be-rest",
+        "gcr.io/$PROJECT_ID/tcc-be-rest-alfon",
         "--timeout",
         "1000s",
         "--port",
