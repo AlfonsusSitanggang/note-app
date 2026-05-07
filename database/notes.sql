@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS notes_db;
-USE notes_db;
+CREATE DATABASE IF NOT EXISTS notes_123230100;
+USE notes_nim;
 
-DROP TABLE IF EXISTS `notes`;
+DROP TABLE IF EXISTS `notes_db`;
 CREATE TABLE `notes` (
   `id` int NOT NULL AUTO_INCREMENT,
   `judul` varchar(255) NOT NULL,
