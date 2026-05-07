@@ -186,7 +186,7 @@ app.delete('/api/notes/:id', async (req, res) => {
 });
 
 // Jalankan server
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Server berjalan di port ${PORT}`);
     console.log(`📋 Test API: /api/health`);
 });
