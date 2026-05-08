@@ -1,5 +1,5 @@
 // Konfigurasi API
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://be-rest-alfon-579679620696.us-central1.run.app/api';
 
 // State
 let isEditing = false;
