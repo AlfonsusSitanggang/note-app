@@ -1,14 +1,11 @@
 runtime: python312
+service: frontend
 
 handlers:
-  - url: /style.css
-    static_files: style.css
-    upload: style.css
-
-  - url: /app.js
-    static_files: app.js
-    upload: app.js
-
-  - url: /.*
+  - url: /
     static_files: index.html
     upload: index.html
+
+  - url: /(.*)
+    static_files: \1
+    upload: (.*)
